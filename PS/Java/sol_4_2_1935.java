@@ -10,16 +10,16 @@ public class sol_4_2_1935 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int num = Integer.parseInt(br.readLine()); // º¯¼ö °³¼ö
-		Stack<Double> stack = new Stack<>(); // char Çü ½ºÅÃ ¼±¾ğ
-		HashMap<Character,Double> map1 = new HashMap<Character,Double>(); // ¹®ÀÚ, ¼ıÀÚ
-		String str = br.readLine(); // ÈÄÀ§ Ç¥±â½Ä
+		int num = Integer.parseInt(br.readLine()); // ë³€ìˆ˜ ê°œìˆ˜
+		Stack<Double> stack = new Stack<>(); // char í˜• ìŠ¤íƒ ì„ ì–¸
+		HashMap<Character,Double> map1 = new HashMap<Character,Double>(); // ë¬¸ì, ìˆ«ì
+		String str = br.readLine(); // í›„ìœ„ í‘œê¸°ì‹
 		
 		for(int i= 0 ;i<str.length();i++) {
 			
 			char c = str.charAt(i);
 			
-			if(c == '+') { // ¿¬»êÀÚ¶ó¸é stack ¿¡¼­ µÎ ¼ıÀÚ »Ì¾Æ¼­ °è»ê ÈÄ ³Ö¾îÁÖ±â
+			if(c == '+') { // ì—°ì‚°ìë¼ë©´ stack ì—ì„œ ë‘ ìˆ«ì ë½‘ì•„ì„œ ê³„ì‚° í›„ ë„£ì–´ì£¼ê¸°
 				double a = stack.peek();
 				stack.pop();
 				double b = stack.peek();
@@ -51,8 +51,8 @@ public class sol_4_2_1935 {
 				double result = b / a;
 				stack.push(result);
 			}
-			else { // ¹®ÀÚ¶ó¸é ÇØ´çÇÏ´Â ¼ıÀÚ ³Ö¾îÁÖ±â
-				if (!map1.containsKey(c)) { // map ¿¡ ¾øÀ¸¸é Ãß°¡ 
+			else { // ë¬¸ìë¼ë©´ í•´ë‹¹í•˜ëŠ” ìˆ«ì ë„£ì–´ì£¼ê¸°
+				if (!map1.containsKey(c)) { // map ì— ì—†ìœ¼ë©´ ì¶”ê°€ 
 					String temp = br.readLine();
 					map1.put(c,(double)Integer.parseInt(temp));
 				}

@@ -1,27 +1,27 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-//import java.util.Arrays; // ¹è¿­ ¼±¾ğ
+//import java.util.Arrays; // ë°°ì—´ ì„ ì–¸
 import java.util.HashMap; // key,value
-import java.util.StringTokenizer; // ¹®ÀÚ¿­ ³ª´©±â
+import java.util.StringTokenizer; // ë¬¸ìì—´ ë‚˜ëˆ„ê¸°
 
 
 public class sol_4_2_9375 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
-		int testCase = Integer.parseInt(br.readLine()); // Å×½ºÆ® °³¼ö ÀÔ·Â¹Ş±â
+		int testCase = Integer.parseInt(br.readLine()); // í…ŒìŠ¤íŠ¸ ê°œìˆ˜ ì…ë ¥ë°›ê¸°
 		int result = 0;
 		for( int i =0; i<testCase;i++) {
 			
-			int clothNum = Integer.parseInt(br.readLine()); // ¿ÊÀÇ °³¼ö
-			HashMap<String,Integer> map1 = new HashMap<String,Integer>(); // ¿ÊÀÇ Á¾·ù, °³¼ö
+			int clothNum = Integer.parseInt(br.readLine()); // ì˜·ì˜ ê°œìˆ˜
+			HashMap<String,Integer> map1 = new HashMap<String,Integer>(); // ì˜·ì˜ ì¢…ë¥˜, ê°œìˆ˜
 			
 			for(int j = 0 ; j<clothNum;j++) {
-				StringTokenizer st = new StringTokenizer(br.readLine(), " "); // ¹®ÀÚ¿­ ÀĞ°í °ø¹é ±âÁØ ³ª´©			
-				st.nextToken();	// ¿Ê ÀÌ¸§ °í·Á X 
+				StringTokenizer st = new StringTokenizer(br.readLine(), " "); // ë¬¸ìì—´ ì½ê³  ê³µë°± ê¸°ì¤€ ë‚˜ëˆ„			
+				st.nextToken();	// ì˜· ì´ë¦„ ê³ ë ¤ X 
 				
-				String kind = st.nextToken();	// ¿Ê Á¾·ù 
+				String kind = st.nextToken();	// ì˜· ì¢…ë¥˜ 
 
 				if (map1.containsKey(kind)) {
 					map1.put(kind, map1.get(kind) + 1);

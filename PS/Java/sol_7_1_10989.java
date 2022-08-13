@@ -3,14 +3,14 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-// ÀÔ·Â BufferedReader ·Î Ãâ·Â sysout println ¸¹ÀÌ ¾²±â X
+// ì…ë ¥ BufferedReader ë¡œ ì¶œë ¥ sysout println ë§ì´ ì“°ê¸° X
 
 public class sol_7_1_10989 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int N = Integer.parseInt(br.readLine()); // ÃÑ °³¼ö
-		int[] seq = new int[10001]; // ÀúÀåµÇ´Â ¹è¿­
+		int N = Integer.parseInt(br.readLine()); // ì´ ê°œìˆ˜
+		int[] seq = new int[10001]; // ì €ì¥ë˜ëŠ” ë°°ì—´
 		
 		for(int i =0 ; i<N; i++) { 
 			seq[Integer.parseInt(br.readLine())]++;
@@ -29,7 +29,7 @@ public class sol_7_1_10989 {
 		
 		StringBuilder sb = new StringBuilder();
 		
-// 		±âº» ³»Àå array sort »ç¿ë ( O(nlogn ~ n^2)  )
+// 		ê¸°ë³¸ ë‚´ì¥ array sort ì‚¬ìš© ( O(nlogn ~ n^2)  )
 //		Arrays.sort(seq);
 //		
 		

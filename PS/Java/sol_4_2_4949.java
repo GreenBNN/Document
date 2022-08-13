@@ -19,12 +19,12 @@ public class sol_4_2_4949 {
 	}
 	
 	public static String solve(String s) {
-		Stack<Character> stack = new Stack<>(); // char Çü ½ºÅÃ ¼±¾ğ
+		Stack<Character> stack = new Stack<>(); // char í˜• ìŠ¤íƒ ì„ ì–¸
 		
 		for(int i = 0;i<s.length();i++) {
-			char c = s.charAt(i); // i ¹øÂ° ¹®ÀÚ
+			char c = s.charAt(i); // i ë²ˆì§¸ ë¬¸ì
 			
-			// ¿©´Â °ıÈ£¶ó¸é stack ¿¡ push
+			// ì—¬ëŠ” ê´„í˜¸ë¼ë©´ stack ì— push
 			if(c=='(' || c == '[') {
 				stack.push(c);
 			}

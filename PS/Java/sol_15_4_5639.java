@@ -19,11 +19,11 @@ public class sol_15_4_5639 {
         }
 
         void insert(int n) {
-            if (n < this.num) { // ÁÂÃø 
+            if (n < this.num) { // ì¢Œì¸¡ 
                 if (this.left == null)
                     this.left = new Node(n);
                 else this.left.insert(n);
-            } else { // ¿ìÃø
+            } else { // ìš°ì¸¡
                 if (this.right == null)
                     this.right = new Node(n);
                 else this.right.insert(n);
@@ -40,7 +40,7 @@ public class sol_15_4_5639 {
             input = br.readLine();
             if (input == null || input.equals(""))
                 break;
-            root.insert(Integer.parseInt(input)); // ³ëµåÃß°¡
+            root.insert(Integer.parseInt(input)); // ë…¸ë“œì¶”ê°€
         }
 
         postOrder(root);

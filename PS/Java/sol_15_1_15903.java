@@ -13,8 +13,8 @@ public class sol_15_1_15903 {
 		PriorityQueue<Long> pq = new PriorityQueue<Long>();
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-		N = Integer.parseInt(st.nextToken()); // ¼ıÀÚ °³¼ö
-		M = Integer.parseInt(st.nextToken()); // ÇÕÃ¼ ¼ö
+		N = Integer.parseInt(st.nextToken()); // ìˆ«ì ê°œìˆ˜
+		M = Integer.parseInt(st.nextToken()); // í•©ì²´ ìˆ˜
 		
 		st = new StringTokenizer(br.readLine(), " ");
 		for( int i = 0; i< N; i++) {

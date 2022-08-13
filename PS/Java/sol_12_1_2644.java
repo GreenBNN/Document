@@ -15,19 +15,19 @@ public class sol_12_1_2644 {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		N = Integer.parseInt(br.readLine()); // ÀüÃ¼ »ç¶÷
+		N = Integer.parseInt(br.readLine()); // ì „ì²´ ì‚¬ëŒ
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-		a = Integer.parseInt(st.nextToken()); // Ã¹ ¹øÂ° »ç¶÷
-		b = Integer.parseInt(st.nextToken()); // µÎ ¹øÂ° »ç¶÷
+		a = Integer.parseInt(st.nextToken()); // ì²« ë²ˆì§¸ ì‚¬ëŒ
+		b = Integer.parseInt(st.nextToken()); // ë‘ ë²ˆì§¸ ì‚¬ëŒ
 		
-		int M = Integer.parseInt(br.readLine()); // ÃÌ¼ö °³¼ö
+		int M = Integer.parseInt(br.readLine()); // ì´Œìˆ˜ ê°œìˆ˜
 		arr = new int[101][101];
-		visited = new int[101]; // ¹æ¹®¿©ºÎ
+		visited = new int[101]; // ë°©ë¬¸ì—¬ë¶€
 		for(int i = 0 ; i< M; i++) {
 			st = new StringTokenizer(br.readLine(), " ");
-			int parent = Integer.parseInt(st.nextToken()); // ºÎ¸ğ
-			int child = Integer.parseInt(st.nextToken()); // ÀÚ½Ä
+			int parent = Integer.parseInt(st.nextToken()); // ë¶€ëª¨
+			int child = Integer.parseInt(st.nextToken()); // ìì‹
 			arr[parent][child] = 1;
 			arr[child][parent] = 1;
 		}

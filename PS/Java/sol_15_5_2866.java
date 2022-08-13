@@ -31,10 +31,10 @@ public class sol_15_5_2866 {
 	        int ans = 0, left = 1, right = C - 1;
 	        while (left <= right) {
 	            int mid = (left + right) >> 1;
-	            if (check(mid)) { // ¡ﬂ∫π X
+	            if (check(mid)) { // √Å√ü¬∫¬π X
 	                ans = mid;
 	                left = mid + 1;
-	            } else { // ¡ﬂ
+	            } else { // √Å√ü
 	                right = mid - 1;
 	            }
 	        }

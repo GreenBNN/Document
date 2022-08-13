@@ -1,7 +1,7 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer; // ¹®ÀÚ¿­ ³ª´©±â
+import java.util.StringTokenizer; // ë¬¸ìì—´ ë‚˜ëˆ„ê¸°
 
 import java.util.LinkedList;
 
@@ -11,18 +11,18 @@ public class sol_4_2_1021 {
 		
 		LinkedList<Integer> deque = new LinkedList<Integer>();
 		
-		int cnt = 0; // 2, 3¹ø ¿¬»ê °³¼ö
+		int cnt = 0; // 2, 3ë²ˆ ì—°ì‚° ê°œìˆ˜
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
 		
-		int N = Integer.parseInt(st.nextToken()); // ÃÑ °³¼ö
-		int M = Integer.parseInt(st.nextToken()); // »Ì´Â ¼ıÀÚ °³¼ö
+		int N = Integer.parseInt(st.nextToken()); // ì´ ê°œìˆ˜
+		int M = Integer.parseInt(st.nextToken()); // ë½‘ëŠ” ìˆ«ì ê°œìˆ˜
 		
 		for(int i =1 ; i<=N; i++) {
 			deque.offer(i);
 		}
 		
-		int[] seq = new int[M]; // »ÌÀ¸·Á°í ÇÏ´Â ¼ıÀÚ ¹è¿­
+		int[] seq = new int[M]; // ë½‘ìœ¼ë ¤ê³  í•˜ëŠ” ìˆ«ì ë°°ì—´
 		
 		st = new StringTokenizer(br.readLine(), " ");
 		for(int i= 0 ;i<M;i++) {
@@ -30,10 +30,10 @@ public class sol_4_2_1021 {
 		}
 		
 		for(int i =0 ;i<M; i++ ) { 
-			int target_idx = deque.indexOf(seq[i]); // »ÌÀ» ¼ıÀÚÀÇ index
-			int half_idx = deque.size()/2; // 10ÀÌ¸é 5(6), 5ÀÌ¸é 2(3) idx(½ÇÁ¦¼ıÀÚ)
+			int target_idx = deque.indexOf(seq[i]); // ë½‘ì„ ìˆ«ìì˜ index
+			int half_idx = deque.size()/2; // 10ì´ë©´ 5(6), 5ì´ë©´ 2(3) idx(ì‹¤ì œìˆ«ì)
 			
-			if(target_idx <= half_idx ) { // Áß°£ ¾Õ¿¡ ÀÖÀ¸¸é 2¹ø ½ÇÇà
+			if(target_idx <= half_idx ) { // ì¤‘ê°„ ì•ì— ìˆìœ¼ë©´ 2ë²ˆ ì‹¤í–‰
 				for(int j  =0; j<target_idx;j++) {
 					int temp = deque.pollFirst();
 					deque.offerLast(temp);
@@ -41,14 +41,14 @@ public class sol_4_2_1021 {
 				}
 				
 			}
-			else { // Áß°£ µÚ¿¡ ÀÖÀ¸¸é 3¹ø ½ÇÇà
+			else { // ì¤‘ê°„ ë’¤ì— ìˆìœ¼ë©´ 3ë²ˆ ì‹¤í–‰
 				for(int j =0;j<deque.size() - target_idx;j++) {
 					int temp = deque.pollLast();
 					deque.offerFirst(temp);
 					cnt++;
 				}
 			}
-			deque.pollFirst(); // ¿¬»êÀÌ ³¡³­ ÈÄ 1¹ø ½ÇÇà
+			deque.pollFirst(); // ì—°ì‚°ì´ ëë‚œ í›„ 1ë²ˆ ì‹¤í–‰
 		}
 		System.out.println(cnt);
 	}

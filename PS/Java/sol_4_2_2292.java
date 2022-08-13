@@ -6,14 +6,14 @@ public class sol_4_2_2292 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int num = 0; // Ã£°íÀÚ ÇÏ´Â ¼ö
-		int answer = 0; // ´ä
-		int temp = 0; // ºñ±³½Ä
+		int num = 0; // ì°¾ê³ ì í•˜ëŠ” ìˆ˜
+		int answer = 0; // ë‹µ
+		int temp = 0; // ë¹„êµì‹
 		
-		num = Integer.parseInt(br.readLine()); // ÀÔ·Â¹Ş±â
+		num = Integer.parseInt(br.readLine()); // ì…ë ¥ë°›ê¸°
 		
 		for(int i =1; i<40000;i++) { 
-			temp = 3*i*(i-1) +1; // temp ±îÁö i ¹øÂ° 
+			temp = 3*i*(i-1) +1; // temp ê¹Œì§€ i ë²ˆì§¸ 
 			if(temp >= num) {
 				answer = i;
 				break;

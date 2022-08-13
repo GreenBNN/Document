@@ -10,7 +10,7 @@ public class sol_4_2_2164 {
 		
 		int num = Integer.parseInt(br.readLine());
 		
-		Queue<Integer> queue = new LinkedList<>(); // int Çü queue ¼±¾ð, linkedlist »ç¿ë
+		Queue<Integer> queue = new LinkedList<>(); // int í˜• queue ì„ ì–¸, linkedlist ì‚¬ìš©
 		
 		for (int i = 1; i<= num;i++) {
 			queue.add(i);

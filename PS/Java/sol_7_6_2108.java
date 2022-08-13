@@ -12,13 +12,13 @@ public class sol_7_6_2108 {
 		
 		int[] arr = new int[N];
 		int sum = 0;
-		 // ¹è¿­¿¡ ÀúÀå
+		 // ë°°ì—´ì— ì €ì¥
 		for(int i = 0; i < N; i++) {
 			int value = Integer.parseInt(br.readLine());
 			arr[i] = value;
 			sum += value;
 		}
-		 // ¿À¸§Â÷¼ø Á¤·Ä
+		 // ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬
 		Arrays.sort(arr);
 		
 		int flag = 0;
@@ -26,10 +26,10 @@ public class sol_7_6_2108 {
 		int mode = 10000;
 		
 		for(int i = 0; i < N; i++) {
-			int jump = 0;	// µ¿ÀÏÇÑ ¼ö°¡ ³ª¿Â ¼ö
+			int jump = 0;	// ë™ì¼í•œ ìˆ˜ê°€ ë‚˜ì˜¨ ìˆ˜
 			int count = 1;
 			
-			// µ¿ÀÏÇÑ ¼ö ¼¼±â
+			// ë™ì¼í•œ ìˆ˜ ì„¸ê¸°
 			for(int j = i + 1; j < N; j++){
 				if(arr[i] != arr[j]) {
 					break;
@@ -38,13 +38,13 @@ public class sol_7_6_2108 {
 				jump++;
 			}
 			
-			// °»½ÅµÇ¸ç ÃÖºó¼ö Ã£À½
+			// ê°±ì‹ ë˜ë©° ìµœë¹ˆìˆ˜ ì°¾ìŒ
 			if(count > freqNum) {
 				freqNum = count;
 				mode = arr[i];
 				flag = 1;
 			}
-			// ÃÖºó¼ö¿Í °°°í µÎ¹øÂ°¸é º¯°æ ( ÀÌÈÄ¿¡ ´õ ³ª¿Íµµ À§¿¡¼­ °É·¯Áü )
+			// ìµœë¹ˆìˆ˜ì™€ ê°™ê³  ë‘ë²ˆì§¸ë©´ ë³€ê²½ ( ì´í›„ì— ë” ë‚˜ì™€ë„ ìœ„ì—ì„œ ê±¸ëŸ¬ì§ )
 			else if(count == freqNum && flag == 1) {
 				mode = arr[i];
 				flag = 0;

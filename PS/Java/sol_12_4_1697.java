@@ -4,8 +4,8 @@ import java.io.IOException;
 import java.util.*;
 
 public class sol_12_4_1697 {
-	static int N; // ¼öºó
-	static int K; // µ¿»ý
+	static int N; // ìˆ˜ë¹ˆ
+	static int K; // ë™ìƒ
 	static int answer ;
 	
 	static int visited[] = new int[100001];
@@ -17,18 +17,18 @@ public class sol_12_4_1697 {
 		visited[n] = 1; 
 		while (queue.isEmpty() == false) { 
 			n = queue.remove(); 
-			if (n == K) { // µµ´Þ ÇÏ¸é ¸®ÅÏ
+			if (n == K) { // ë„ë‹¬ í•˜ë©´ ë¦¬í„´
 				return visited[n]-1; 
 				} 
-			if (n-1>=0 && visited[n-1] == 0) { //  n-1 ¾È°¬À¸¸é ¹æ¹®
+			if (n-1>=0 && visited[n-1] == 0) { //  n-1 ì•ˆê°”ìœ¼ë©´ ë°©ë¬¸
 				visited[n-1] = visited[n]+1; 
 				queue.add(n-1); 
 				} 
-			if (n+1 <= 100000 && visited[n+1] == 0) { // n+1 ¾È°¬À¸¸é ¹æ¹®
+			if (n+1 <= 100000 && visited[n+1] == 0) { // n+1 ì•ˆê°”ìœ¼ë©´ ë°©ë¬¸
 				visited[n+1] = visited[n]+1; 
 				queue.add(n+1); 
 				} 
-			if (2*n <= 100000 && visited[2*n] == 0) { // n*2 ¾È°¬À¸¸é ¹Ù¿ò¤¤
+			if (2*n <= 100000 && visited[2*n] == 0) { // n*2 ì•ˆê°”ìœ¼ë©´ ë°”ì›€ã„´
 				visited[2*n] = visited[n] + 1; 
 				queue.add(2*n); 
 				}

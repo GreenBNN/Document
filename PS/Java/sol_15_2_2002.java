@@ -24,7 +24,7 @@ public class sol_15_2_2002 {
 		for(int i=0; i<N; i++) {
 			String carNumber=in[i];
 			for(int j=0; j<N; j++) {
-				// ÀÚ±â¸¦ ¸¸³ª¸é check = true
+				// ìžê¸°ë¥¼ ë§Œë‚˜ë©´ check = true
 				if(out[j].equals(carNumber)) {
 					check[j]=true;
 					break;

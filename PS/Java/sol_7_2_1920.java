@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer; // ¹®ÀÚ¿­ ³ª´©±â
+import java.util.StringTokenizer; // ë¬¸ìì—´ ë‚˜ëˆ„ê¸°
 import java.util.Arrays;
 
-/*ÀÔ·Â 
+/*ì…ë ¥ 
 5
 4 1 5 2 3
 5
@@ -15,7 +15,7 @@ public class sol_7_2_1920 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int N = Integer.parseInt(br.readLine()); // N °³ÀÇ Á¤¼ö
+		int N = Integer.parseInt(br.readLine()); // N ê°œì˜ ì •ìˆ˜
 		int[] arrN = new int[N];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -23,13 +23,13 @@ public class sol_7_2_1920 {
 			arrN[i] = Integer.parseInt(st.nextToken());
 		}
 		
-		int M = Integer.parseInt(br.readLine()); // »Ì´Â ¼ıÀÚ °³¼ö
+		int M = Integer.parseInt(br.readLine()); // ë½‘ëŠ” ìˆ«ì ê°œìˆ˜
 		int[] arrM = new int[M];
 		
 		st = new StringTokenizer(br.readLine(), " ");
 		StringBuilder sb = new StringBuilder();
 		
-//		ÇÏ³ª¾¿ ´Ù Ã£±â ½Ã°£º¹Àâµµ O(N*M) ½Ã°£ÃÊ°ú		
+//		í•˜ë‚˜ì”© ë‹¤ ì°¾ê¸° ì‹œê°„ë³µì¡ë„ O(N*M) ì‹œê°„ì´ˆê³¼		
 //		int flag =0;
 //		for(int i =0; i<M;i++) {
 //			//arrM[i] = Integer.parseInt(st.nextToken());
@@ -62,7 +62,7 @@ public class sol_7_2_1920 {
 	                right = midIndex - 1;
 	            } else if (midValue < num) {
 	                left = midIndex + 1;
-	            } else { //Ã£À½
+	            } else { //ì°¾ìŒ
 	                flag = true;
 	                sb.append(1).append('\n');
 	                break;

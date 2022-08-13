@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer; // ¹®ÀÚ¿­ ³ª´©±â
+import java.util.StringTokenizer; // ë¬¸ìì—´ ë‚˜ëˆ„ê¸°
 import java.util.Arrays;
 /*
-ÀÔ·Â
+ì…ë ¥
 10
 6 3 2 10 10 10 -10 -10 7 3
 8
@@ -15,7 +15,7 @@ public class sol_7_3_10816 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int N = Integer.parseInt(br.readLine()); // N °³ÀÇ Á¤¼ö
+		int N = Integer.parseInt(br.readLine()); // N ê°œì˜ ì •ìˆ˜
 		int[] arrN = new int[N];
 		
 		StringTokenizer st = new StringTokenizer(br.readLine(), " ");
@@ -24,14 +24,14 @@ public class sol_7_3_10816 {
 		}
 		Arrays.sort(arrN);
 		
-		int M = Integer.parseInt(br.readLine()); // »Ì´Â ¼ıÀÚ °³¼ö
+		int M = Integer.parseInt(br.readLine()); // ë½‘ëŠ” ìˆ«ì ê°œìˆ˜
 		
 		StringBuilder sb = new StringBuilder();
 		st = new StringTokenizer(br.readLine(), " ");
 		
 		for(int i =0; i<M;i++) {
 			int key = Integer.parseInt(st.nextToken());
-			// ÀÔ·Â¹ŞÀº Á¤¼ö¿¡ µû¶ó index ±¸ÇÏ±â ( °³¼ö ¼¼±â )
+			// ì…ë ¥ë°›ì€ ì •ìˆ˜ì— ë”°ë¼ index êµ¬í•˜ê¸° ( ê°œìˆ˜ ì„¸ê¸° )
 			sb.append(upperBound(arrN, key) - lowerBound(arrN, key)).append(' ');
 		}	
 		System.out.println(sb);
@@ -40,13 +40,13 @@ public class sol_7_3_10816 {
 		int lo = 0; 
 		int hi = arr.length; 
 
-		// lo°¡ hi¶û °°¾ÆÁú ¶§ ±îÁö ¹İº¹
+		// loê°€ hië‘ ê°™ì•„ì§ˆ ë•Œ ê¹Œì§€ ë°˜ë³µ
 		while (lo < hi) {
-			int mid = (lo + hi) / 2; // Áß°£À§Ä¡¸¦ ±¸ÇÑ´Ù.
+			int mid = (lo + hi) / 2; // ì¤‘ê°„ìœ„ì¹˜ë¥¼ êµ¬í•œë‹¤.
 			/*
-			 *  key °¡ mid º¸´Ù ÀÛ°Å³ª °°À¸¸é hi = mid ·Î ¶¯±â±â
+			 *  key ê°€ mid ë³´ë‹¤ ì‘ê±°ë‚˜ ê°™ìœ¼ë©´ hi = mid ë¡œ ë•¡ê¸°ê¸°
 			 *  
-			 *  key °¡ mid º¸´Ù Å©¸é lo = mid + 1 ·Î ¶¯±â±â
+			 *  key ê°€ mid ë³´ë‹¤ í¬ë©´ lo = mid + 1 ë¡œ ë•¡ê¸°ê¸°
 			 */
 			if (key <= arr[mid]) {
 				hi = mid;
@@ -61,14 +61,14 @@ public class sol_7_3_10816 {
 		int lo = 0; 
 		int hi = arr.length; 
  
-		// lo°¡ hi¶û °°¾ÆÁú ¶§ ±îÁö ¹İº¹
+		// loê°€ hië‘ ê°™ì•„ì§ˆ ë•Œ ê¹Œì§€ ë°˜ë³µ
 		while (lo < hi) {
-			int mid = (lo + hi) / 2; // Áß°£À§Ä¡¸¦ ±¸ÇÑ´Ù.
-			// key°ªÀÌ Áß°£ À§Ä¡ÀÇ °ªº¸´Ù ÀÛÀ» °æ¿ì
+			int mid = (lo + hi) / 2; // ì¤‘ê°„ìœ„ì¹˜ë¥¼ êµ¬í•œë‹¤.
+			// keyê°’ì´ ì¤‘ê°„ ìœ„ì¹˜ì˜ ê°’ë³´ë‹¤ ì‘ì„ ê²½ìš°
 			if (key < arr[mid]) {
 				hi = mid;
 			}
-			// Áßº¹¿ø¼ÒÀÇ °æ¿ì else¿¡¼­ Ã³¸®µÈ´Ù.
+			// ì¤‘ë³µì›ì†Œì˜ ê²½ìš° elseì—ì„œ ì²˜ë¦¬ëœë‹¤.
 			else {
 				lo = mid + 1;
 			}

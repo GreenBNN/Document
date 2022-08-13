@@ -3,24 +3,24 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.*;
 public class sol_12_3_14888_2 {
-	static int MAX = Integer.MIN_VALUE; // ÃÖ´ë°ª 
-	static int MIN = Integer.MAX_VALUE; // ÃÖ¼Ò°ª 
-	static String[] operators; // ¿¬»êÀÚ ¹è¿­ 
-	static boolean[] visited; // ¿¬»êÀÚ »ç¿ë ¿©ºÎ Ã¼Å© 
-	static int[] numbers; // °è»êÇÒ ¼ıÀÚ ¹è¿­ 
-	static int N; // ¼ıÀÚ °³¼ö 
+	static int MAX = Integer.MIN_VALUE; // ìµœëŒ€ê°’ 
+	static int MIN = Integer.MAX_VALUE; // ìµœì†Œê°’ 
+	static String[] operators; // ì—°ì‚°ì ë°°ì—´ 
+	static boolean[] visited; // ì—°ì‚°ì ì‚¬ìš© ì—¬ë¶€ ì²´í¬ 
+	static int[] numbers; // ê³„ì‚°í•  ìˆ«ì ë°°ì—´ 
+	static int N; // ìˆ«ì ê°œìˆ˜ 
 	public static void main(String[] args) throws IOException { 
 		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in)); 
 		StringTokenizer st; 
 		N = Integer.parseInt(bf.readLine()); 
 		numbers = new int[N]; 
 		operators = new String[N-1]; 
-		visited = new boolean[N]; /* numbers ¹Ş±â */ 
+		visited = new boolean[N]; /* numbers ë°›ê¸° */ 
 		st = new StringTokenizer(bf.readLine()); 
 		for (int i = 0; i < N; i++) { 
 			numbers[i] = Integer.parseInt(st.nextToken()); 
 			} 
-		/* operators ¹Ş±â */ 
+		/* operators ë°›ê¸° */ 
 		int index = 0; 
 		String oper = "+-*/"; 
 		st = new StringTokenizer(bf.readLine()); 
@@ -35,7 +35,7 @@ public class sol_12_3_14888_2 {
 		System.out.println(MIN); 
 	} 
 	static void dfs( int sum, int depth) {
-		/* Á¾·á Á¶°Ç */ 
+		/* ì¢…ë£Œ ì¡°ê±´ */ 
 		if (depth == N) {
 			if (MAX < sum) MAX = sum; 
 			if (MIN > sum) MIN = sum; 

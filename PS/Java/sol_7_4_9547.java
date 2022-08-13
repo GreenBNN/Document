@@ -1,10 +1,10 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.StringTokenizer; // ¹®ÀÚ¿­ ³ª´©±â
+import java.util.StringTokenizer; // ë¬¸ìì—´ ë‚˜ëˆ„ê¸°
 import java.util.Arrays;
 /*
-ÀÔ·Â
+ì…ë ¥
 2
 2 3
 2 1
@@ -22,15 +22,15 @@ public class sol_7_4_9547 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		StringBuilder sb = new StringBuilder();
-		int T = Integer.parseInt(br.readLine()); // Å×½ºÆ®ÄÉÀÌ½º
+		int T = Integer.parseInt(br.readLine()); // í…ŒìŠ¤íŠ¸ì¼€ì´ìŠ¤
 		
 		for(int i =0 ;i<T;i++) {
 			StringTokenizer st = new StringTokenizer(br.readLine(), " ");
-			int C = Integer.parseInt(st.nextToken()); // ÈÄº¸ ¼ö
-			int V = Integer.parseInt(st.nextToken()); // À¯±ÇÀÚ ¼ö
+			int C = Integer.parseInt(st.nextToken()); // í›„ë³´ ìˆ˜
+			int V = Integer.parseInt(st.nextToken()); // ìœ ê¶Œì ìˆ˜
 			
-			int[][] arr = new int[V][C]; // À¯±ÇÀÚ¿¡ µû¸¥ ¼±È£µµ ÀúÀå
-			int[] selectArr = new int[C+1]; // ÈÄº¸ÀÚ°¡ ¹ŞÀ» Ç¥ ¼ö ¹è¿­
+			int[][] arr = new int[V][C]; // ìœ ê¶Œìì— ë”°ë¥¸ ì„ í˜¸ë„ ì €ì¥
+			int[] selectArr = new int[C+1]; // í›„ë³´ìê°€ ë°›ì„ í‘œ ìˆ˜ ë°°ì—´
 			
 			for(int j = 0 ;j < V;j++) {
 				
