@@ -6,7 +6,7 @@
 int main() {
 	int num;
 	int test, s, b;
-	int arr[504] = { 0 }; // ¸ğµç °æ¿ìÀÇ ¼ö
+	int arr[504] = { 0 }; // ëª¨ë“  ê²½ìš°ì˜ ìˆ˜
 
 	scanf("%d", &num);
 	

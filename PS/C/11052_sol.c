@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-/*##### Á¡È­½Ä, Àç±ÍÇÔ¼ö, ½ºÅÃ 
-			ÀÌ Àü¿¡ »ç¿ëÇß´ø °Íµé ÀçÈ°¿ë ÇÒ ¼ö ÀÖ³ª È®ÀÎÇÏ±â #####*/
+/*##### ì í™”ì‹, ì¬ê·€í•¨ìˆ˜, ìŠ¤íƒ 
+			ì´ ì „ì— ì‚¬ìš©í–ˆë˜ ê²ƒë“¤ ì¬í™œìš© í•  ìˆ˜ ìˆë‚˜ í™•ì¸í•˜ê¸° #####*/
 
 #define MAX_CARD 10001
 
@@ -32,7 +32,7 @@ void findMax(int cardNum) {
 		findMax(cardNum - 1);
 	}
 	dp[cardNum] = 0;
-	for (int i = 1; i <= cardNum; i++) { // °¡Àå Å« °ªÀÌ dp ¿¡ ÀúÀå
+	for (int i = 1; i <= cardNum; i++) { // ê°€ì¥ í° ê°’ì´ dp ì— ì €ì¥
 		if (dp[cardNum] < dp[cardNum - i] + price[i]) {
 			dp[cardNum] = dp[cardNum - i] + price[i];
 		}

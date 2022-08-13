@@ -17,8 +17,8 @@ int main() {
 	while (find != input)
 	{
 		if (!flag) {
-			a = input / 10; // 10ÀÇ ÀÚ¸® ¼ö
-			b = input % 10; // 1ÀÇ ÀÚ¸® ¼ö
+			a = input / 10; // 10ì˜ ìë¦¬ ìˆ˜
+			b = input % 10; // 1ì˜ ìë¦¬ ìˆ˜
 
 			temp = a + b;
 			flag = 1;
@@ -27,8 +27,8 @@ int main() {
 		else {
 			find = b * 10 + temp % 10;
 
-			a = find / 10; // 10ÀÇ ÀÚ¸® ¼ö
-			b = find % 10; // 1ÀÇ ÀÚ¸® ¼ö
+			a = find / 10; // 10ì˜ ìë¦¬ ìˆ˜
+			b = find % 10; // 1ì˜ ìë¦¬ ìˆ˜
 
 			temp = a + b;
 			cnt++;

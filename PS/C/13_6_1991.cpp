@@ -10,7 +10,7 @@ struct node {
 
 vector<node> v(26);
 
-void recursive_preorder(char data) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  VLR Ãâ·Â
+void recursive_preorder(char data) { // ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´  VLR ì¶œë ¥
 	if (data == '.') 
 		return;
 
@@ -19,7 +19,7 @@ void recursive_preorder(char data) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  VLR Ãâ·Â
 	recursive_preorder(v[data].right);
 }
 
-void recursive_inorder(char data) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ LVR Ãâ·Â 
+void recursive_inorder(char data) { // ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´ LVR ì¶œë ¥ 
 	if (data == '.') 
 		return;
 
@@ -28,7 +28,7 @@ void recursive_inorder(char data) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ LVR Ãâ·Â
 	recursive_inorder(v[data].right);
 }
 
-void recursive_postorder(char data) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  LRV Ãâ·Â
+void recursive_postorder(char data) { // ìž¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´  LRV ì¶œë ¥
 	if (data == '.') 
 		return;
 

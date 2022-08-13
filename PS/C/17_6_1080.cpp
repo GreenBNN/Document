@@ -2,9 +2,9 @@
 #include<vector>
 #include<algorithm>
 
-// Çà·ÄÀÇ Å©±â N M
-// a ¹è¿­À» 3X3 À¸·Î µÚÁý¾î¼­ b ¹è¿­°ú °°¾ÆÁöµµ·Ï ¸¸µé±â
-// µÚÁý´Â ÃÖ¼Ò È½¼ö Ãâ·Â, °°°Ô ¸ø¸¸µé¸é -1 Ãâ·Â
+// í–‰ë ¬ì˜ í¬ê¸° N M
+// a ë°°ì—´ì„ 3X3 ìœ¼ë¡œ ë’¤ì§‘ì–´ì„œ b ë°°ì—´ê³¼ ê°™ì•„ì§€ë„ë¡ ë§Œë“¤ê¸°
+// ë’¤ì§‘ëŠ” ìµœì†Œ íšŸìˆ˜ ì¶œë ¥, ê°™ê²Œ ëª»ë§Œë“¤ë©´ -1 ì¶œë ¥
 
 using namespace std;
 
@@ -29,7 +29,7 @@ int main() {
 	int cnt = 0;
 	for (int i = 0; i < N - 2; i++) {
 		for (int j = 0; j < M - 2; j++) {
-			if (a[i][j] != b[i][j]) { // ´Ù¸£¸é µÚÁý±â
+			if (a[i][j] != b[i][j]) { // ë‹¤ë¥´ë©´ ë’¤ì§‘ê¸°
 				for (int k = i; k <= i + 2; k++) {
 					for (int l = j; l <= j + 2; l++) {
 						a[k][l] = 1 - a[k][l]; // swap

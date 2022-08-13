@@ -1,14 +1,14 @@
-// edge ÁÖ¾îÁö°í
-// DFS, BFS ¹æ¹®ÇÑ ¼ø¼­ Ãâ·Â
+// edge ì£¼ì–´ì§€ê³ 
+// DFS, BFS ë°©ë¬¸í•œ ìˆœì„œ ì¶œë ¥
 
 #include <iostream>
 #include <queue>
 
 using namespace std;
 
-int N; // Á¤Á¡ °³¼ö
-int M; // ¼± °³¼ö
-int V; // ½ÃÀÛ Á¡
+int N; // ì •ì  ê°œìˆ˜
+int M; // ì„  ê°œìˆ˜
+int V; // ì‹œì‘ ì 
 int map[1001][1001];
 int visited[1001];
 queue <int> q;
@@ -18,7 +18,7 @@ void DFS(int v) {
 	cout << v << " ";
 
 	for (int i = 1; i <= N; i++) {
-		if (map[v][i] == 1 && visited[i] == 0) { // °¡Àå ÀÛÀº Á¤Á¡ÀÌ¶û ¿¬°á, ¾ÆÁ÷ ¹æ¹® ¾ÈÇßÀ¸¸é DFS
+		if (map[v][i] == 1 && visited[i] == 0) { // ê°€ì¥ ì‘ì€ ì •ì ì´ë‘ ì—°ê²°, ì•„ì§ ë°©ë¬¸ ì•ˆí–ˆìœ¼ë©´ DFS
 			DFS(i);
 		}
 	}
@@ -34,7 +34,7 @@ void BFS(int v) {
 		q.pop();
 
 		for (int w = 1; w <= N; w++) {
-			if (map[v][w] == 1 && visited[w] == 0) { // °¡Àå ÀÛÀº Á¤Á¡ÀÌ¶û ¿¬°á, ¾ÆÁ÷ ¹æ¹® ¾ÈÇßÀ¸¸é BFS
+			if (map[v][w] == 1 && visited[w] == 0) { // ê°€ì¥ ì‘ì€ ì •ì ì´ë‘ ì—°ê²°, ì•„ì§ ë°©ë¬¸ ì•ˆí–ˆìœ¼ë©´ BFS
 				q.push(w);
 				visited[w] = true;
 				cout << w << " ";
@@ -58,7 +58,7 @@ int main() {
 		visited[i] = 0;
 	}
 
-	DFS(V); // ¹æ¹®½ÃÀÛ
+	DFS(V); // ë°©ë¬¸ì‹œì‘
 
 	cout << '\n';
 

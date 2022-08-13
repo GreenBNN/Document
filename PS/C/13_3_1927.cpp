@@ -2,16 +2,16 @@
 #include <queue>
 using namespace std;
 
-int N; // ¿¬»ê °³¼ö
-int input; // ÀÚ¿¬¼ö¸é Ãß°¡ 0 ÀÌ¸é min °ª Ãâ·Â, Á¦°Å
+int N; // ì—°ì‚° ê°œìˆ˜
+int input; // ìì—°ìˆ˜ë©´ ì¶”ê°€ 0 ì´ë©´ min ê°’ ì¶œë ¥, ì œê±°
 
 
-// ------------- setÀ¸·Î ÇØº¸±â -> Áßº¹ Çã¿ë ¾ÈµÇ´Ï±î ¾ÈµÊ 
+// ------------- setìœ¼ë¡œ í•´ë³´ê¸° -> ì¤‘ë³µ í—ˆìš© ì•ˆë˜ë‹ˆê¹Œ ì•ˆë¨ 
 //set<int> s;
 
 
-// ------------- ¿ì¼±¼øÀ§ queue ·Î ±¸Çö ¿ø·¡´Â ³»¸²Â÷¼ø
-priority_queue<int, vector<int>, greater<int>> s; // ¿Ã¸²Â÷¼øÀ¸·Î
+// ------------- ìš°ì„ ìˆœìœ„ queue ë¡œ êµ¬í˜„ ì›ë˜ëŠ” ë‚´ë¦¼ì°¨ìˆœ
+priority_queue<int, vector<int>, greater<int>> s; // ì˜¬ë¦¼ì°¨ìˆœìœ¼ë¡œ
 
 int main() {
 	ios::sync_with_stdio(false);
@@ -23,7 +23,7 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		cin >> input;
 		if (input == 0 ) {
-			if (s.size() == 0) { // ºñ¾úÀ¸¸é
+			if (s.size() == 0) { // ë¹„ì—ˆìœ¼ë©´
 				cout << 0;
 				cout << '\n';
 			}

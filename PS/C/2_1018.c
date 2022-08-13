@@ -23,13 +23,13 @@ int main() {
 			cnt2 = 0;
 			for (int a = i; a < i + 8; a++) {
 				for (int b = j; b < j + 8; b++) {
-					if ((a + b) % 2 == 0) { // ¦��
+					if ((a + b) % 2 == 0) { // Â¦¼ö
 						if (arr[a][b] == 'B')
 							cnt++;
 						else
 							cnt2++;
 					}
-					else { // Ȧ��
+					else { // È¦¼ö
 						if (arr[a][b] == 'B')
 							cnt2++;
 						else

@@ -2,14 +2,14 @@
 #include <string.h>
 #include <stdlib.h>
 
-/*####### Ã¢°í ³ĞÀÌ ±¸ÇÏ±â, ¼öÇĞ #######*/
+/*####### ì°½ê³  ë„“ì´ êµ¬í•˜ê¸°, ìˆ˜í•™ #######*/
 
 int main() {
 	int N,L,H;
 	int arr[1001] = { 0, };
 	int highest = 0;
 	int highestPos = 0;
-	int left= 1001, right = 0; // ¸Ç ¿ŞÂÊ, ¿À¸¥ÂÊ
+	int left= 1001, right = 0; // ë§¨ ì™¼ìª½, ì˜¤ë¥¸ìª½
 	int answer = 0;
 
 	scanf("%d", &N);
@@ -30,7 +30,7 @@ int main() {
 	
 	int temp = 0;
 	int cnt = 0;
-	for (int i = left; i <= highestPos; i++) { // ¿ŞÂÊ °è»ê
+	for (int i = left; i <= highestPos; i++) { // ì™¼ìª½ ê³„ì‚°
 		cnt++;
 		if (arr[i] >= temp) {
 			answer += cnt * temp;
@@ -41,7 +41,7 @@ int main() {
 
 	temp = 0;
 	cnt = 0;
-	for (int i = right; i >= highestPos; i--) { // ¿À¸¥ÂÊ °è»ê
+	for (int i = right; i >= highestPos; i--) { // ì˜¤ë¥¸ìª½ ê³„ì‚°
 		cnt++;
 		if (arr[i] >= temp) {
 			answer += cnt * temp;
@@ -49,7 +49,7 @@ int main() {
 			temp = arr[i];
 		}
 	}
-	answer += highest; // Á¦ÀÏ ³ôÀº ±âÁØ °è»ê
+	answer += highest; // ì œì¼ ë†’ì€ ê¸°ì¤€ ê³„ì‚°
 
 	printf("%d", answer);
 	return 0;

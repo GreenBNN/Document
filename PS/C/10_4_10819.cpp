@@ -1,6 +1,6 @@
-// N °³ÀÇ ¿ø¼ÒÀÎ ¼ø¿­
-// ÀÌ¿ôÇÏ´Â ¿ø¼ÒÀÇ Â÷ Àý´ë°ª ¸ðµÎ ÇÕÇÑ °ÍÀÇ ÃÖ´ë°ª ±¸ÇÏ±â
-// N! ¸ðµç °æ¿ì Ã£¾Æ¾ßÇÔ
+// N ê°œì˜ ì›ì†Œì¸ ìˆœì—´
+// ì´ì›ƒí•˜ëŠ” ì›ì†Œì˜ ì°¨ ì ˆëŒ€ê°’ ëª¨ë‘ í•©í•œ ê²ƒì˜ ìµœëŒ€ê°’ êµ¬í•˜ê¸°
+// N! ëª¨ë“  ê²½ìš° ì°¾ì•„ì•¼í•¨
 
 #include <iostream>
 #include <vector>
@@ -8,9 +8,9 @@
 
 using namespace std;
 
-int N ; // ¿ø¼Ò °³¼ö
-int temp = 0; // °¢ ½ÃÇà °ª ÀúÀå
-int result; // °»½ÅµÇ´Â ÃÖ´ë°ª
+int N ; // ì›ì†Œ ê°œìˆ˜
+int temp = 0; // ê° ì‹œí–‰ ê°’ ì €ìž¥
+int result; // ê°±ì‹ ë˜ëŠ” ìµœëŒ€ê°’
 
 int main() {
 	cin >> N;

@@ -15,10 +15,10 @@ int main() {
 		cin >> arr[i];
 	}
 
-    vector<int> copyArr(arr); // º¤ÅÍ º¹»ç
+    vector<int> copyArr(arr); // ë²¡í„° ë³µì‚¬
     sort(copyArr.begin(), copyArr.end()); 
 
-	// unique Áßº¹ µÚ·Î º¸³»±â, erase µÚ·Î º¸³½ ³ð Áö¿ì±â
+	// unique ì¤‘ë³µ ë’¤ë¡œ ë³´ë‚´ê¸°, erase ë’¤ë¡œ ë³´ë‚¸ ë†ˆ ì§€ìš°ê¸°
     copyArr.erase(unique(copyArr.begin(), copyArr.end()), copyArr.end());
     for (int i = 0; i < N; i++)
     {

@@ -24,7 +24,7 @@ int main() {
 	while (L <= H) {
 		long long midValue = (L + H) / 2;
 		sum = 0;
-		for (int i = 0; i < N; i++) { // sum À¸·Î ÀÚ¸¥ ºÎºÐ ±¸ÇÏ±â
+		for (int i = 0; i < N; i++) { // sum ìœ¼ë¡œ ìžë¥¸ ë¶€ë¶„ êµ¬í•˜ê¸°
 			if (midValue < arr[i]) {
 				sum += arr[i] - midValue;
 			}

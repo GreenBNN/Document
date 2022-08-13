@@ -1,9 +1,9 @@
-// ¿¬»ê °³¼ö N
-// 0 ÀÌ ¾Æ´Ï¶ó¸é Èü¿¡ ³Ö±â
-// 0 ÀÌ¶ó¸é Á¦°Å ½ÇÇà
-// Á¦°Å´Â Àý´ë°ªÀÌ °¡Àå ÀÛÀº ¼ö Á¦°Å
-// ¿©·¯°³¶ó¸é °¡Àå ÀÛÀº ¼ö ¸ÕÀú Á¦°Å
-// ºñ¾îÀÖÀ» ¶§ Ãâ·ÂÇÏ¶ó°í ÇÏ¸é 0 Ãâ·Â
+// ì—°ì‚° ê°œìˆ˜ N
+// 0 ì´ ì•„ë‹ˆë¼ë©´ íž™ì— ë„£ê¸°
+// 0 ì´ë¼ë©´ ì œê±° ì‹¤í–‰
+// ì œê±°ëŠ” ì ˆëŒ€ê°’ì´ ê°€ìž¥ ìž‘ì€ ìˆ˜ ì œê±°
+// ì—¬ëŸ¬ê°œë¼ë©´ ê°€ìž¥ ìž‘ì€ ìˆ˜ ë¨¼ì € ì œê±°
+// ë¹„ì–´ìžˆì„ ë•Œ ì¶œë ¥í•˜ë¼ê³  í•˜ë©´ 0 ì¶œë ¥
 
 #include<iostream>
 #include<algorithm>
@@ -11,8 +11,8 @@
 using namespace std;
 
 int N, x;
-priority_queue<int, vector<int>, greater<int>> v1; // ¾ç¼ö ¿À¸§Â÷¼ø ( 1 2 3 4 5 )top
-priority_queue<int> v2; // À½¼ö ³»¸²Â÷¼ø (-1 -2 -3 -4 )top
+priority_queue<int, vector<int>, greater<int>> v1; // ì–‘ìˆ˜ ì˜¤ë¦„ì°¨ìˆœ ( 1 2 3 4 5 )top
+priority_queue<int> v2; // ìŒìˆ˜ ë‚´ë¦¼ì°¨ìˆœ (-1 -2 -3 -4 )top
 
 
 int main()
@@ -54,11 +54,11 @@ int main()
 				}
 			}
 		}
-		else if (x > 0) // ¾ç¼öÀÏ ¶§
+		else if (x > 0) // ì–‘ìˆ˜ì¼ ë•Œ
 		{
 			v1.push(x);
 		}
-		else // (x < 0)À½¼öÀÏ ¶§
+		else // (x < 0)ìŒìˆ˜ì¼ ë•Œ
 		{
 			v2.push(x);
 		}

@@ -19,7 +19,7 @@ void cal(int num, char op) {
 	case 'd':
 		if (num < 0) {
 			num = num * (-1);
-			result = (result / num) * (-1); // ³ª´« ¸ò ±¸ÇÏ°í -
+			result = (result / num) * (-1); // Â³ÂªÂ´Â« Â¸Ã² Â±Â¸Ã‡ÃÂ°Ã­ -
 			break;
 		}
 		else {

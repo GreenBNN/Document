@@ -3,9 +3,9 @@
 #include <set>
 using namespace std;
 
-int N; //¹®ÀÚ¿­ °³¼ö
-int M; // °Ë»çÇÒ ¹®ÀÚ¿­ °³¼ö
-int cnt = 0; // ÀÖ´Â ¹®ÀÚ¿­ count
+int N; //ë¬¸ìì—´ ê°œìˆ˜
+int M; // ê²€ì‚¬í•  ë¬¸ìì—´ ê°œìˆ˜
+int cnt = 0; // ìˆëŠ” ë¬¸ìì—´ count
 set<string> s;
 
 string input;

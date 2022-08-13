@@ -12,11 +12,11 @@ int main() {
 	cin.tie(NULL);
 	cout.tie(NULL);
 
-	int M; // ¿¬»ê °³¼ö
-	string op; // ¸í·É¾î
-	int num; // ¼ıÀÚ
+	int M; // ì—°ì‚° ê°œìˆ˜
+	string op; // ëª…ë ¹ì–´
+	int num; // ìˆ«ì
 
-	set<int> s; // ÁıÇÕ
+	set<int> s; // ì§‘í•©
 
 	cin >> M;
 
@@ -32,7 +32,7 @@ int main() {
 		}
 		else if (op == "check") {
 			cin >> num;
-			if (s.find(num) != s.end()) { // Á¸Àç
+			if (s.find(num) != s.end()) { // ì¡´ì¬
 				cout << 1;
 				cout << '\n';
 			}

@@ -4,7 +4,7 @@
 
 #define MAX_SIZE 1000001
 
-char input[MAX_SIZE]; // ÀÔ·Â¹ŞÀ» ¹®ÀÚ¿­
+char input[MAX_SIZE]; // ì…ë ¥ë°›ì„ ë¬¸ìì—´
 int len;
 int arr[26] = { 0 }; // a to z array A:65, a:97, Z:90, z;128
 int answer;
@@ -16,16 +16,16 @@ int main() {
 	scanf("%s",&input);
 	len = strlen(input);
 	for (int i = 0; i < len; i++) {
-		if (input[i] > 96) { // ´ë¹®ÀÚ¶ó¸é
+		if (input[i] > 96) { // ëŒ€ë¬¸ìë¼ë©´
 			arr[(input[i] - 32 - 65)]++;
 		}
-		else { // ¼Ò¹®ÀÚ¶ó¸é
+		else { // ì†Œë¬¸ìë¼ë©´
 			arr[input[i] - 65]++;
 		}
 	}
 
 
-	// °¡Àå Å« °³¼ö ±¸ÇÏ°í Ãâ·Â Ã³¸®
+	// ê°€ì¥ í° ê°œìˆ˜ êµ¬í•˜ê³  ì¶œë ¥ ì²˜ë¦¬
 
 	answer = arr[0];
 	for (int i = 1; i < 26; i++) {
@@ -36,7 +36,7 @@ int main() {
 	}
 
 	for (int i = 1; i < 26; i++) {
-		if (i != idx &&answer == arr[i]) { // idx ¸¦ Á¦¿ÜÇÏ°í °°Àº °³¼ö°¡ Á¸ÀçÇÏ¸é
+		if (i != idx &&answer == arr[i]) { // idx ë¥¼ ì œì™¸í•˜ê³  ê°™ì€ ê°œìˆ˜ê°€ ì¡´ì¬í•˜ë©´
 			flag = 1;
 		}
 	}

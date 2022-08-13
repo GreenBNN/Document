@@ -3,8 +3,8 @@
 #include <stdlib.h>
 #define MAX_QUEUE_SIZE 100001
 
-/*####### ´ÜÀ§½Ã°£¸¶´Ù ÇÑÄ­¾¿ º¯È­°¡ ÀÏ¾î³ª´Âµ¥
-			±× º¯È­¸¦ ¾î¶»°Ô ÇØ¾ß ½±°Ô Ç® Áö »ý°¢ÇØ¾ß ÇÑ´Ù. #######*/
+/*####### ë‹¨ìœ„ì‹œê°„ë§ˆë‹¤ í•œì¹¸ì”© ë³€í™”ê°€ ì¼ì–´ë‚˜ëŠ”ë°
+			ê·¸ ë³€í™”ë¥¼ ì–´ë–»ê²Œ í•´ì•¼ ì‰½ê²Œ í’€ ì§€ ìƒê°í•´ì•¼ í•œë‹¤. #######*/
 typedef int element;
 typedef struct {
 	element data[MAX_QUEUE_SIZE];
@@ -44,7 +44,7 @@ void dequePrint(DequeType* q) {
 
 void addRear(DequeType* q, element item) {
 	if (isFull(q)) {
-		error("Å¥°¡ Æ÷È­»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ í¬í™”ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
 	q->data[q->rear] = item;
@@ -53,7 +53,7 @@ void addRear(DequeType* q, element item) {
 element deleteRear(DequeType* q) {
 	int prev = q->rear;
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->rear = (q->rear - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
 	return q->data[prev];
@@ -61,12 +61,12 @@ element deleteRear(DequeType* q) {
 
 element getRear(DequeType* q) {
 	if (isEmpty(q))
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	return q->data[q->rear];
 }
 void addFront(DequeType* q, element item) {
 	if (isFull(q)) {
-		error("Å¥°¡ Æ÷È­»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ í¬í™”ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->data[q->front] = item;
 	q->front = (q->front - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
@@ -75,14 +75,14 @@ void addFront(DequeType* q, element item) {
 element deleteFront(DequeType* q) {
 	int prev = q->front;
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->front = (q->front + 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
 	return q->data[prev];
 }
 element getFront(DequeType* q) {
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	return q->data[(q->front + 1) % MAX_QUEUE_SIZE];
 }

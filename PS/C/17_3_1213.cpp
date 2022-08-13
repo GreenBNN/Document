@@ -9,7 +9,7 @@ int main()
 {
     string s;
     cin >> s;
-    for (char i : s) // for i in s ó�� s �ȿ� �ִ� ���ҵ� �ҷ�����
+    for (char i : s) // for i in s 처럼 s 안에 있는 원소들 불러오기
     {
         alpha[i]++;
     }

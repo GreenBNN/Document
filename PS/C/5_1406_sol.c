@@ -2,8 +2,8 @@
 #include<string.h>
 #include<stdlib.h>
 
-/*###### ¹®ÀÚ¿­ ÀÔ·Â ¹Ş±â, Ä¿¼­ ¿òÁ÷ÀÌ±â, double linkedList 
-            stack, µ¦ µî ¹Ú½º µÎ °³ »ç¿ëÇÏ±â ######*/
+/*###### ë¬¸ìì—´ ì…ë ¥ ë°›ê¸°, ì»¤ì„œ ì›€ì§ì´ê¸°, double linkedList 
+            stack, ë± ë“± ë°•ìŠ¤ ë‘ ê°œ ì‚¬ìš©í•˜ê¸° ######*/
 
 typedef struct node {
     char data;

@@ -2,9 +2,9 @@
 #include <string>
 #include <algorithm>
 
-// ½ÄÀÌ ÁÖ¾îÁü ¼ýÀÚ¿Í +. - À¸·Î ÀÌ·ç¾îÁü
-// 5ÀÚ¸® ¼ö ÀÌ»ó ¼ö X, ¿¬¼Ó ¿¬»êÀÚ X
-// °ýÈ£¸¦ ÃÄ¼­ ½ÄÀÇ °ªÀ» ÃÖ¼Ò·Î ¸¸µé±â
+// ì‹ì´ ì£¼ì–´ì§ ìˆ«ìžì™€ +. - ìœ¼ë¡œ ì´ë£¨ì–´ì§
+// 5ìžë¦¬ ìˆ˜ ì´ìƒ ìˆ˜ X, ì—°ì† ì—°ì‚°ìž X
+// ê´„í˜¸ë¥¼ ì³ì„œ ì‹ì˜ ê°’ì„ ìµœì†Œë¡œ ë§Œë“¤ê¸°
 
 
 using namespace std;
@@ -18,11 +18,11 @@ int main()
 
 	for (int i = 0; i <= input.length(); i++) {
 		if (input[i] == '-' || input[i] == '+' || i == input.length() ) {
-			if (flag == false) { // -°¡ ¾È¶¹À» ¶§
+			if (flag == false) { // -ê°€ ì•ˆë–´ì„ ë•Œ
 				sum += temp;
 				temp = 0;
 			}
-			else { // -°¡ ¶¹À» ¶§
+			else { // -ê°€ ë–´ì„ ë•Œ
 				sum -= temp;
 				temp = 0;
 			}
@@ -31,7 +31,7 @@ int main()
 				flag = true;
 			}
 		}
-		else { // ¼ýÀÚÀÏ ¶§ 
+		else { // ìˆ«ìžì¼ ë•Œ 
 			temp *= 10;
 			temp += input[i] - '0';
 		}

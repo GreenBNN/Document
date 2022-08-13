@@ -3,7 +3,7 @@
 
 using namespace std;
 
-/*######## VLR LVR RVL ³ëµå Ã³¸®ÇÏ´Â ¹æ¹ı #########*/
+/*######## VLR LVR RVL ë…¸ë“œ ì²˜ë¦¬í•˜ëŠ” ë°©ë²• #########*/
 
 struct node {
     char data;
@@ -17,7 +17,7 @@ void recursive_preorder(tree_pointer ptr);
 void recursive_postorder(tree_pointer ptr);
 
 
-// ³ëµå¸¦ ¸¸µé±â
+// ë…¸ë“œë¥¼ ë§Œë“¤ê¸°
 tree_pointer create_tree_node(char data) {
     tree_pointer ptr = (tree_pointer)malloc(sizeof(struct node));
     ptr->data = data;
@@ -61,7 +61,7 @@ void main() {
 }
 
 // 14_Trees pg 27 - 29
-void recursive_inorder(tree_pointer ptr) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ LVR Ãâ·Â 
+void recursive_inorder(tree_pointer ptr) { // ì¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´ LVR ì¶œë ¥ 
     if (ptr->data == '.')
         return;
     if (ptr) {
@@ -70,7 +70,7 @@ void recursive_inorder(tree_pointer ptr) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ LVR Ãâ·Â
         recursive_inorder(ptr->right_child);
     }
 }
-void recursive_preorder(tree_pointer ptr) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  VLR Ãâ·Â
+void recursive_preorder(tree_pointer ptr) { // ì¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´  VLR ì¶œë ¥
     if (ptr->data == '.')
         return;
     if (ptr) {
@@ -79,7 +79,7 @@ void recursive_preorder(tree_pointer ptr) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  VLR Ãâ·Â
         recursive_preorder(ptr->right_child);
     }
 }
-void recursive_postorder(tree_pointer ptr) { // Àç±ÍÇÔ¼ö¸¦ »ç¿ëÇØ  LRV Ãâ·Â
+void recursive_postorder(tree_pointer ptr) { // ì¬ê·€í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•´  LRV ì¶œë ¥
     if (ptr->data == '.')
         return;
     if (ptr) {

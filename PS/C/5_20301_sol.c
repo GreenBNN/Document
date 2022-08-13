@@ -1,10 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/*####### ¹®ÀÚ¿­ ÀÔ·Â¹Þ±â, Å¥ 
-			¹ÝÀü ¿ä¼¼Çª½º ¼ø¿­ 
-				7 3 4 / 7¸í Áß 3 ¹øÂ° »èÁ¦ 
-					4¹øÂ°¸¶´Ù ¹ÝÀü#######*/
+/*####### ë¬¸ìžì—´ ìž…ë ¥ë°›ê¸°, í 
+			ë°˜ì „ ìš”ì„¸í‘¸ìŠ¤ ìˆœì—´ 
+				7 3 4 / 7ëª… ì¤‘ 3 ë²ˆì§¸ ì‚­ì œ 
+					4ë²ˆì§¸ë§ˆë‹¤ ë°˜ì „#######*/
 
 #define MAX_QUEUE_SIZE 5001
 typedef int element;
@@ -46,7 +46,7 @@ void dequePrint(DequeType* q) {
 
 void addRear(DequeType* q, element item) {
 	if (isFull(q)) {
-		error("Å¥°¡ Æ÷È­»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ í¬í™”ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->rear = (q->rear + 1) % MAX_QUEUE_SIZE;
 	q->data[q->rear] = item;
@@ -55,7 +55,7 @@ void addRear(DequeType* q, element item) {
 element deleteRear(DequeType* q) {
 	int prev = q->rear;
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->rear = (q->rear - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
 	return q->data[prev];
@@ -63,12 +63,12 @@ element deleteRear(DequeType* q) {
 
 element getRear(DequeType* q) {
 	if (isEmpty(q))
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	return q->data[q->rear];
 }
 void addFront(DequeType* q, element item) {
 	if (isFull(q)) {
-		error("Å¥°¡ Æ÷È­»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ í¬í™”ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->data[q->front] = item;
 	q->front = (q->front - 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
@@ -77,14 +77,14 @@ void addFront(DequeType* q, element item) {
 element deleteFront(DequeType* q) {
 	int prev = q->front;
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	q->front = (q->front + 1 + MAX_QUEUE_SIZE) % MAX_QUEUE_SIZE;
 	return q->data[prev];
 }
 element getFront(DequeType* q) {
 	if (isEmpty(q)) {
-		error("Å¥°¡ °ø¹é»óÅÂÀÔ´Ï´Ù.");
+		error("íê°€ ê³µë°±ìƒíƒœìž…ë‹ˆë‹¤.");
 	}
 	return q->data[(q->front + 1) % MAX_QUEUE_SIZE];
 }

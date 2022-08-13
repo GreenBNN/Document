@@ -4,7 +4,7 @@ using namespace std;
 int dx[] = { 1, 0, -1, 0 }; 
 int dy[] = { 0, -1, 0, 1 }; 
 int main(void) {
-	//dir 0, 1, 2, 3 = µ¿, ¼­, ³², ºÏ 
+	//dir 0, 1, 2, 3 = ë™, ì„œ, ë‚¨, ë¶ 
 	int m, n, x = 0, y = 0, dir = 0; 
 	int num; 
 	int check = 0; 
@@ -12,7 +12,7 @@ int main(void) {
 	for (int i = 0; i < m; i++) { 
 		string order; 
 		cin >> order >> num; 
-		//¹üÀ§ ¾È¿¡ ÀÖ´Ù¸é 
+		//ë²”ìœ„ ì•ˆì— ìˆë‹¤ë©´ 
 		if (order == "MOVE" && check == 0) { 
 			for (int j = 0; j < num; j++) { 
 				x += dy[dir]; 
@@ -23,7 +23,7 @@ int main(void) {
 				} 
 			} 
 		} else if (order == "TURN") { 
-			//µ¿ÂÊ 
+			//ë™ìª½ 
 			if (num==0) { 
 				dir = (dir + 4 - 1) % 4; 
 			} else { 

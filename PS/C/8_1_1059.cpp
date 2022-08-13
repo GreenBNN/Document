@@ -14,7 +14,7 @@ int main() {
 	vector<int> S(L);
 
 	// vector<int> vec; 
-	// ÀÌÈÄ vec.push_back(a);
+	// Ã€ÃŒÃˆÃ„ vec.push_back(a);
 	
 
 	for (int i = 0; i < L; i++) {
