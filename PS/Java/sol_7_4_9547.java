@@ -21,7 +21,6 @@ import java.util.Arrays;
 public class sol_7_4_9547 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		StringBuilder sb = new StringBuilder();
 		int T = Integer.parseInt(br.readLine()); // 테스트케이스
 		
 		for(int i =0 ;i<T;i++) {

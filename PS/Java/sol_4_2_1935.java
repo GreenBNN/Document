@@ -10,7 +10,7 @@ public class sol_4_2_1935 {
 	public static void main(String[] args) throws IOException {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		
-		int num = Integer.parseInt(br.readLine()); // 변수 개수
+		// int num = Integer.parseInt(br.readLine()); // 변수 개수
 		Stack<Double> stack = new Stack<>(); // char 형 스택 선언
 		HashMap<Character,Double> map1 = new HashMap<Character,Double>(); // 문자, 숫자
 		String str = br.readLine(); // 후위 표기식

@@ -1,7 +1,6 @@
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.IOException;
-import java.util.Arrays;
 
 // 입력 BufferedReader 로 출력 sysout println 많이 쓰기 X
 

@@ -24,7 +24,7 @@ public class sol_7_2_1920 {
 		}
 		
 		int M = Integer.parseInt(br.readLine()); // 뽑는 숫자 개수
-		int[] arrM = new int[M];
+		//int[] arrM = new int[M];
 		
 		st = new StringTokenizer(br.readLine(), " ");
 		StringBuilder sb = new StringBuilder();

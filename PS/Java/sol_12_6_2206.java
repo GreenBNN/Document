@@ -3,7 +3,7 @@ import java.io.InputStreamReader;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class sol_7_5_18110 {
+public class sol_12_6_2206 {
 	public static void main(String[] args) throws IOException {
 		
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
