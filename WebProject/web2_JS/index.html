@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <div class="alert-box" id="alert" >
+        <p id="title">아이디를 입력하세요</p>
+        <!-- <button onclick="DisplayCtrl('alert', 'none');">닫기</button> -->
+        <button id="close">닫기</button>
+    </div>
+    <button onclick="DisplayCtrl('alert', 'block', '아디입력하세요');">열기1</button>
+    <button onclick="DisplayCtrl('alert', 'block', '비번입력하세요');">열기2</button>
+
+
+
+       
+</body>
+
+<script>
+    function DisplayCtrl(id, ctrl, string) {
+        document.getElementById(id).style.display = ctrl;
+        document.getElementById('title').innerHTML = string;    
+    }
+    document.getElementById('close').addEventListener('click', function(){
+        document.getElementById('alert').style.display = 'none';
+    })
+    
+</script>
+</html>
