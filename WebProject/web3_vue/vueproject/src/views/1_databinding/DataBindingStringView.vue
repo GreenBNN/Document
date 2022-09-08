@@ -1,6 +1,7 @@
 <template>
   <div>
-    <h1>Hello {{ userName }}</h1>
+    <h3>담아둔 문자 데이터를 html 에서 사용하기</h3>
+    <h2>Hello {{ userName }}</h2>
     <p>{{ message }}</p>
   </div>
 </template>
